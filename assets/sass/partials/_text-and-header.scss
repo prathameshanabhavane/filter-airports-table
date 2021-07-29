@@ -27,3 +27,9 @@ p, li {
 .small-text {
 	font-size: 14px;
 }
+
+@media(max-width: 767px) {
+	h1 {
+		padding-right: 30px;
+	}
+}
