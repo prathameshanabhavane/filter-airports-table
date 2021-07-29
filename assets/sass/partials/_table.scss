@@ -1,0 +1,91 @@
+.table {
+    td,
+    th {
+        padding: 25px;
+        font-size: 16px;
+        line-height: 20px;
+        border: none;
+    }
+
+    td {
+        font-weight: 400;
+    }
+
+    th {
+        background-color: #e7e7e7;
+    }
+
+    thead {
+        th {
+            border: none;
+        }
+    }
+}
+
+.menu-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    .fa {
+        font-size: 24px;
+        color: $color-1;
+    }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f4f4f4;
+}
+
+.main-body {
+    background-color: $color-2;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.search-element {
+    padding: 15px 0 40px;
+}
+
+.search-input {
+    border: none;
+    border-bottom: 2px solid $color-1;
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-1;
+    width: 100%;
+}
+
+.page-numbers-element {
+    position: relative;
+    padding: 25px;
+    p {
+        font-size: 16px;
+    }
+}
+
+.pagination-btn {
+    position: absolute;
+    top: 21px;
+}
+
+.left-btn {
+    left: 15px;
+}
+
+.right-btn {
+    right: 15px;
+}
+
+@media(max-width: 767px) {
+    .main-body {
+        padding: 30px 0;
+    }
+    .pagination-btn {
+        top: 25px;
+        img {
+            height: 25px;
+        }
+    }
+}

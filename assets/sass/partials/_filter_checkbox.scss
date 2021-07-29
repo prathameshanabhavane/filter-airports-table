@@ -1,0 +1,54 @@
+.filter-checkbox-element {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+    .custom-checkbox {
+        margin-right: 15px;
+        margin-bottom: 10px;
+        .custom-control-label {
+    		&::before {
+    			border-radius: 3px;
+    			border: 2px solid $color-1;
+    		}
+    	}
+
+    	.custom-control-input:indeterminate~.custom-control-label::before {
+    	    border-color: #060606;
+    	    background-color: transparent;
+    	}
+    }
+
+    .custom-control-label {
+        &::before,
+        &::after {
+            top: 0;
+            height: 18px;
+    		width: 18px;
+        }
+    }
+
+    .custom-control-input {
+        &:checked~.custom-control-label {
+            &::before {
+                border-color: $color-1;
+                background-color: $color-1;
+            }
+        }
+    }
+
+    label {
+        font-size: 15px;
+        font-weight: 400;
+        color: $color-1;
+        cursor: pointer;
+        line-height: 17px;
+    }
+}
+
+@media(max-width: 767px) {
+    .type-grid {
+        padding-bottom: 30px;
+    }
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="assets/dist/webapp.min.css">
+
+		<title>Media.net Filter Airports Task</title>
+		<meta name="description" content="Steps and Instructions for optimizations to be strictly followed while UI development for maximum speed">
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+		<link rel="manifest" href="assets/favicons/manifest.json">
+		<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#de3b2e">
+		<meta name="msapplication-TileColor" content="#de3b2e">
+		<meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png">
+		<!-- Address bar color Change in chrome -->
+		<meta name="theme-color" content="#de3b2e">
+		<meta name="msapplication-navbutton-color" content="#de3b2e">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#de3b2e">
+		<!--  Facebook and Twitter meta tag sharing  -->
+		<meta property="og:title" content="title content here"/>
+		<meta property="og:description" content="Desciption goes here"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="website url or page url"/>
+		<meta property="og:site_name" content="site name"/>
+		<meta property="og:image" content="image path"/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="link of website" />
+		<meta name="twitter:title" content="title goes here" />
+		<meta name="twitter:description" content="description goes here" />
+		<meta name="twitter:image:src" content="image path to show on twitter" />
+		<meta name="twitter:site" content="site name" />
+	</head>
+	<body>
+		<main class="main-body">
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h1>
+								Filter <span class="text-gray">airports</span>
+							</h1>
+							<a href="#" class="menu-icon">
+								<i class="fa fa-th-large"></i>
+							</a>
+						</div>
+					</div>
+					<div class="row search-element">
+						<div class="col-12 col-md-6 type-grid">
+							<h3>
+								Type
+							</h3>
+							<div class="filter-checkbox-element">
+								<div class="custom-control custom-checkbox">
+									<input type="radio" class="custom-control-input" id="small" name="type" value="small">
+									<label class="custom-control-label" for="small">Small</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="radio" class="custom-control-input" id="medium" name="type" value="medium">
+									<label class="custom-control-label" for="medium">Medium</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="radio" class="custom-control-input" id="large" name="type" value="large">
+									<label class="custom-control-label" for="large">Large</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="radio" class="custom-control-input" id="heliport" name="type" value="heliport">
+									<label class="custom-control-label" for="heliport">Heliport</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="radio" class="custom-control-input" id="closed" name="type" value="closed">
+									<label class="custom-control-label" for="closed">Closed</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="radio" class="custom-control-input" id="favorits" name="type" value="favorits">
+									<label class="custom-control-label" for="favorits">In your favorits</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 search-grid">
+							<h3>
+								Filter by search
+							</h3>
+							<div class="search">
+								<input type="search" class="search-input" placeholder="Search">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="table-responsive">
+							  <table class="table table-striped">
+								  <thead>
+									  <tr>
+										  <th scope="col">Name</th>
+										  <th scope="col">ICAO</th>
+										  <th scope="col">IATA</th>
+										  <th scope="col">Elev.</th>
+										  <th scope="col">Lat.</th>
+										  <th scope="col">Long.</th>
+										  <th scope="col">Type</th>
+									  </tr>
+								  </thead>
+								  <tbody class="tableList" id="listingTable">
+									  <tr>
+										  <td colspan="7" class="text-center"> Data Loading...</td>
+									  </tr>
+								  </tbody>
+							  </table>
+						  </div>
+						</div>
+						<div class="col-12 text-center page-numbers-element">
+							<a href="#" class="pagination-btn left-btn" id="btn_prev"><img src="assets/img/icons/left-arrow.png" alt="Left arrow"></a>
+							<p>
+								<!-- Page <span id="page_number" class="outline-none"></span> -->
+								Showing <strong id="current_data">5-8</strong> of <strong class="total_results">0</strong> results
+							</p>
+							<a href="#" class="pagination-btn right-btn" id="btn_next"><img src="assets/img/icons/right-arrow.png" alt="Left arrow"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="assets/dist/webapp.min.js"></script>
+		<script src="assets/js/app.js"></script>
+	</body>
+</html>

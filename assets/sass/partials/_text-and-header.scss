@@ -1,0 +1,29 @@
+
+
+h1,h2 {
+	font-size: 52px;
+	padding-bottom: 30px;
+	color: $color-1;
+	line-height: 52px;
+	font-weight: 900;
+}
+
+h3 {
+	font-size: 22px;
+	padding-bottom: 10px;
+	color: $color-1;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 30px;
+}
+
+p, li {
+	font-size: 14px;
+	line-height: 26px;
+	color: $color-1;
+	font-weight: 400;
+}
+
+.small-text {
+	font-size: 14px;
+}
